@@ -1,44 +1,29 @@
-# quick_reference
+# Quick Reference
 
-Quick Reference Sheets
+Snippets I have useful.
 
-## Setting Up Linux Development Environment
+## Terminal
 
-- Ubuntu 22.04 LTS
-- Google Chorme installed at browser. This allows syncing of my Google account.
-- Enable Adblock Plus Premium
-- `sudo apt install git`
-- a repos directory is created `mkdir ~/repos`
-- ssh key added to github see these [notes](https://www.dennisfgardner.com/notes/add-ssh-key-to-git-sever) for more details
-- VS Code installed see these [notes](https://www.dennisfgardner.com/notes/vs-code) for the extensions I like
-- `sudo apt install build-essential`
-- to get manual pages `sudo apt-get install manpages-dev`
-- the standalone Intel IPP is downloaded installed with `sudo ./l_ipp_oneapi_p_2021.7.0.25396.sh `
-- `sudo apt install cmake`
-- `sudo apt install -y make`
-- `sudo apt install -y wget unzip`
-- `sudo apt install cmake-qt-gui`
-- `sudo apt install ffmpeg`
-- `sudo apt install curl`
+### Size of directory
 
-## For pyenv
-
-`sudo apt install libedit-dev`
-`curl https://pyenv.run | bash`
-follow instructions after install to modify `~./bashrc`
-then install python build dependencies
-```bash
-sudo apt update; sudo apt install build-essential libssl-dev zlib1g-dev \
-libbz2-dev libreadline-dev libsqlite3-dev curl \
-libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
+```sh
+du -sh <dir_path>
 ```
 
-## For OpenCV
+Use the *disk usage* command with the `-s` argument to summarize the results and `-h` give human-readable output.
 
-The instructions from [here](https://docs.opencv.org/4.x/d7/d9f/tutorial_linux_install.html) are followed to build contrib verson but these configurations are used:
+### Largest files and subdirectories inside current directory
 
-```bash
-cmake -DOPENCV_EXTRA_MODULES_PATH=../opencv_contrib-4.x/modules -DOPENCV_GENERATE_PKGCONFIG=ON -DOPENCV_DOWNLOAD_PATH=/tmp/opencv-cache ../opencv-4.x
+```sh
+du -ahx . | sort -rh | head -n 10
 ```
 
-followed by `sudo make install`
+The `-a` gets the size of all files and directories and the '-x' argument prevents `du` from going into other mounted/networked drives. The `-r` argument with the `sort` command reverses the results to the largest files are on top.
+
+### Number of files in a directory
+
+List the files and pipe them into word count.
+
+```bash
+ls /media/dennis/1TBdrive/zips/ | wc
+```

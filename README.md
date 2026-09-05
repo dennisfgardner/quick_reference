@@ -41,3 +41,65 @@ ls zips/ | xargs -I {} unzip zips/{} -d unzips/
 ```
 
 > Note: this breaks on filenames with spaces.
+
+## Working on Remote Machines
+
+### Generate a Key
+
+You only need to do this once.
+
+```bash
+ssh-keygen -t ed25519 -C "<comment>"
+```
+
+For the `<comment>`, I do an email or a computer description like "raspberry_pi".
+The comment labels the keys online so you can manage them.
+
+I use the default location and I typically don't use a passphrase (just leave blank and press Enter).
+If you do use a passphrase, which is more secure, then you need to enter it in every time you push or pull.
+
+### SSH w/o password
+
+Copy the public key to the remote host so you don't need to enter a password every time you log in.
+After putting the key on the host, you can just `ssh <username>@<IP_address>`
+
+```bash
+ssh-copy-id <username>@<IP_address>
+```
+
+You'll be asked for the remote's password to copy the key.
+
+### Setting up SSH with online repositories
+
+The step are similar for Github and Gitlab.
+
+First you need to copy the public key.
+This is system dependent.
+
+#### MacOS
+
+`pbcopy < ~/.ssh/id_ed25519.pub`
+
+#### Linux
+
+You might need to install xclip if you don't have it.
+
+`xclip -sel clip < ~/.ssh/id_ed25519.pub`
+
+#### Windows
+
+`cat ~/.ssh/id_ed25519.pub | clip`
+
+#### Text Editor
+
+Alternatively, you can open the public key in a text editor and copy it.
+
+#### Paste key online
+
+Navigate to the SSH setting of the online host and paste in the public key.
+
+You can test if it's successful with the following, for example:
+
+`ssh -T git@github.com`
+
+And yes, it should be git@ not my_username@git.

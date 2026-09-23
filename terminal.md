@@ -102,3 +102,19 @@ You can test if it's successful with the following, for example:
 `ssh -T git@github.com`
 
 And yes, it should be git@ not my_username@git.
+
+## PDFs
+
+Here's a terminal command using ghostscript to reduce PDF file size:
+
+`gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook -dNOPAUSE -dQUIET -dBATCH -sOutputFile=output.pdf input.pdf`
+
+Replace input.pdf and output.pdf with your actual filenames.
+
+Quality settings (adjust -dPDFSETTINGS):
+- /screen — lowest quality, smallest file (web viewing)
+- /ebook — good compression with reasonable quality (recommended for most cases)
+- /printer — higher quality, moderate compression
+- /prepress — highest quality, minimal compression
+
+For even smaller files at lower quality, try /screen instead of /ebook.

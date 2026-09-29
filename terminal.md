@@ -118,3 +118,17 @@ Quality settings (adjust -dPDFSETTINGS):
 - /prepress — highest quality, minimal compression
 
 For even smaller files at lower quality, try /screen instead of /ebook.
+
+## Recording
+
+Use `ffmpeg` to caputre a video and audio:
+
+```bash
+ffmpeg -f v4l2 -framerate 30 -video_size 640x480 -i /dev/video2 -f alsa -i sysdefault:CARD=SB522A -c:v libx264 -c:a aac -preset fast ~/Videos/webcam-$(date +%Y%m%d-%H%M%S).mp4
+```
+
+If the video is upside down, you can use the following command to rotate:
+
+```bash
+ffmpeg -i ~/Videos/webcam-20260925-085326.mp4 -vf "hflip,vflip" -c:v libx264 -c:a copy ~/Videos/webcam-20260925-085326-rotated.mp4
+```

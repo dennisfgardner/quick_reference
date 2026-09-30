@@ -13,6 +13,8 @@
 
 Triple combos stack meanings (e.g. `SHIFT+ALT` = move it, the alternate way). Not airtight — a few bindings just dodge letter collisions — but that's the intent. Note: Linux/Hyprland calls it `ALT`, not "Opt" (macOS Option).
 
+**Use `SUPER + K` to look up shortcuts.**
+
 ## Tiling Window Management
 
 | Function | Shortcut |
@@ -25,27 +27,18 @@ Triple combos stack meanings (e.g. `SHIFT+ALT` = move it, the alternate way). No
 | Toggle Horz/Vert Split | `SUPER + J` |
 | Toggle Float or Tiled | `SUPER + T` |
 
-## Basic
-
-| Function | Shortcut |
-|----------|----------|
-| Omarchy Menu | `SUPER + SPACE` |
-| Keyboard Bindings | `SUPER + K` |
-| WiFi settings | `SUPER + CRTL + W` |
-| Bluetooth | `SUPER + CTRL + B` | 
-| Battery | `SUPER + ALT + CTRL + B` |
-| Web Browser | `SUPER + SHIFT + RETURN` or `SUPER + SHIFT + B` |
-
 ## Open Apps
 
 | Function | Shortcut |
 |----------|----------|
+| Omarchy Menu | `SUPER + SPACE` |
 | App Menu | `SUPER + ALT + SPACE` |
 | Terminal | `SUPER + RETURN` |
+| Web Browser | `SUPER + SHIFT + RETURN` or `SUPER + SHIFT + B` |
+| Calendar | `SUPER + SHIFT + C` |
 | Tmux | `SUPER + ALT + RETURN` |
 | Herdr | `SUPER + CTRL + RETURN`|
 | X (aka Twitter) | `SUPER + SHIFT + X` |
-| Calendar | `SUPER + SHIFT + C` |
 
 ## System Control
 

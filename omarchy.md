@@ -15,7 +15,7 @@ Triple combos stack meanings (e.g. `SHIFT+ALT` = move it, the alternate way). No
 
 **Use `SUPER + K` to look up shortcuts.**
 
-## Tiling Window Management
+## Window Management
 
 | Function | Shortcut |
 |----------|----------|
@@ -26,6 +26,11 @@ Triple combos stack meanings (e.g. `SHIFT+ALT` = move it, the alternate way). No
 | Swap Windows | `SUPER + SHIFT + ARROW` |
 | Toggle Horz/Vert Split | `SUPER + J` |
 | Toggle Float or Tiled | `SUPER + T` |
+| Toggle Scratch Pad | `SUPER + S` |
+| Toggle Dwindle/Scrolling | `SUPER + L` |
+| Move Window | `SUPER + Right MOUSE BUTTONs` |
+| Resize Window | `SUPER + LEFT MOUSE BUTTON` |
+| Google Gap | `SUPER + SHIFT + BACKSPACE` |
 
 ## Open Apps
 
@@ -36,6 +41,8 @@ Triple combos stack meanings (e.g. `SHIFT+ALT` = move it, the alternate way). No
 | Terminal | `SUPER + RETURN` |
 | Web Browser | `SUPER + SHIFT + RETURN` or `SUPER + SHIFT + B` |
 | Calendar | `SUPER + SHIFT + C` |
+| Agent | `SUPER + CTRL + SHIFT + A` |
+| Weather | `SUPER + CTRL + ALT + W` |
 | Tmux | `SUPER + ALT + RETURN` |
 | Herdr | `SUPER + CTRL + RETURN`|
 | X (aka Twitter) | `SUPER + SHIFT + X` |
@@ -47,10 +54,19 @@ Triple combos stack meanings (e.g. `SHIFT+ALT` = move it, the alternate way). No
 | Audio |     `SUPER + CTRL + A` |
 | Bluetooth | `SUPER + CTRL + B` | 
 | Battery |   `SUPER + CTRL + ALT + B` |
-| WiFi |      `SUPER + CRTL + W` |
+| WiFi |      `SUPER + CTRL + W` |
+| Lock Computer | `SUPER + L` |
+| Computer Menu | `SUPER + ESC`|
 
 ## Updating
 
 - `omarchy update` — system/GUI apps & packages (VS Code, pacman/AUR, Omarchy itself)
 - `mise upgrade` — all mise-managed CLI/dev tools at once (node, gh, claude, codex, etc.)
 - `mise upgrade <pkg>` — just one mise-managed tool, e.g. mise upgrade node
+
+## Creating/Linking Web App
+
+1. First open the Omarchy Menu: `SUPER + SPACE`
+2. Use arrow keys to select and move into `Install` menu
+3. Select Web App
+4. Name it and then provide link
